@@ -1,14 +1,14 @@
-import React from "react";
-import { Text, TouchableOpacity } from "react-native";
+import React, { forwardRef } from "react";
+import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
-type Props = {
+type Props = TouchableOpacityProps & {
   title: string;
 };
 
-export function Button({ title }: Props) {
+export const Button = forwardRef<TouchableOpacity, Props>(({ title, ...rest }, ref) => {
   return (
-    <TouchableOpacity style={{ width: 200, padding: 16, backgroundColor: "#8257e5", borderRadius: 7, alignItems: "center" }}>
+    <TouchableOpacity ref={ref} {...rest} style={{ width: 200, padding: 16, backgroundColor: "#8257e5", borderRadius: 7, alignItems: "center" }}>
       <Text style={{ fontSize: 16, color: "white", fontWeight: "700" }}>{title}</Text>
     </TouchableOpacity>
   );
-}
+});
