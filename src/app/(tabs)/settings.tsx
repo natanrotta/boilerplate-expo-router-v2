@@ -1,9 +1,6 @@
-import { Text, View } from "react-native";
+import React from "react";
+import { Settings } from "../../screens";
 
-export default function Settings() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 44, fontWeight: "700" }}>Configurações</Text>
-    </View>
-  );
+export default function SettingsTab() {
+  return <Settings />;
 }

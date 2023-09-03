@@ -1,9 +1,6 @@
-import { Text, View } from "react-native";
+import React from "react";
+import { Profile } from "../../screens";
 
-export default function Profile() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 44, fontWeight: "700" }}>Profile</Text>
-    </View>
-  );
+export default function ProfileTab() {
+  return <Profile />;
 }

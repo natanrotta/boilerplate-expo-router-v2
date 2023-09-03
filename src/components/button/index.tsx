@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { TouchableOpacityStyled, TextStyled } from "./styles";
 
 type Props = TouchableOpacityProps & {
   title: string;
@@ -7,8 +8,8 @@ type Props = TouchableOpacityProps & {
 
 export const Button = forwardRef<TouchableOpacity, Props>(({ title, ...rest }, ref) => {
   return (
-    <TouchableOpacity ref={ref} {...rest} style={{ width: 200, padding: 16, backgroundColor: "#8257e5", borderRadius: 7, alignItems: "center" }}>
-      <Text style={{ fontSize: 16, color: "white", fontWeight: "700" }}>{title}</Text>
-    </TouchableOpacity>
+    <TouchableOpacityStyled ref={ref} {...rest}>
+      <TextStyled>{title}</TextStyled>
+    </TouchableOpacityStyled>
   );
 });
